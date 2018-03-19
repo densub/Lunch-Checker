@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+    <head>
+        <title>Lunch Checker</title>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script> 
+        <script src="app.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <style>
+         .message { font-size: 1.3em; font-weight: bold; }
+         .content { font-family: Calibri; color: brown;}
+         .box {width: 330px; height: 30px; border-block-end-color: palegreen };
+
+        </style>
+        </head>
+         <body>
+        <div ng-controller="ctrl">
+            <h1 class="content">Lunch Checker</h1>
+            <div>
+            Things you have for your lunch: 
+            <input class = "box" type="text" ng-model="food"
+            placeholder="list comma separated dishes you usually have for lunch">
+            <div>
+            <input type="button" class="btn" ng-model="check" ng-click="enjoy()" value="check if too much" >
+            </div>
+            <div class = "form-group message">
+            {{message}}
+            </div>
+            
+           
+      </div>
+    </body>
+</html>
